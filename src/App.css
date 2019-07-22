@@ -1,16 +1,17 @@
+h1,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  max-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,4 +31,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+.editing-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+}
+
+.whole-article {
+  width: 18.5cm;
+  height: 10.5cm;
+  border: 1px solid black;
+  padding: 0.1cm;
+}
+
+.title {
+  width: 100%;
+  height: 1.5cm;
+  border: 1px solid lightgray;
+  text-align: start;
+}
+
+h1#title {
+  font-size: 1.2cm;
+}
+
+.chapeau {
+  width: 100%;
+  height: 1cm;
+  margin: 0.2cm 0;
+  border: 1px solid lightgray;
+  text-align: start;
+}
+
+.article-content {
+  height: 7.4cm;
+  text-align: justify;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0.2cm;
+  border: 1px solid lightgray;
+}
+
+.red-border {
+  border: 1px solid red;
 }

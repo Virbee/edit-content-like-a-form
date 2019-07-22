@@ -1,24 +1,33 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import EditTitle from "./components/EditTitle";
+import EditChapeau from "./components/EditChapeau";
+import EditText from "./components/EditText";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hi <code>go for editing content</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Early edition</h1>
       </header>
+      <section className="editing-article">
+        <div className="whole-article">
+          <div className="title" id="title-container">
+            <EditTitle />
+          </div>
+          <div className="chapeau">
+            <EditChapeau />
+          </div>
+          <div className="article-content">
+            <div className="column" id="first-column">
+              <EditText />
+            </div>
+            <div className="column" id="second-column">
+              <p />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
