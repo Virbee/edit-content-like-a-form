@@ -13,7 +13,7 @@ class EditTitle extends React.Component {
     const titleContainer = document.getElementById("title-container");
     // si il y a overflow, ne pas mettre à jour l'état
     if (titleDiv.clientHeight > titleContainer.clientHeight) {
-      this.setState({ html: this.state.html.replace(/&nbsp;/g, "") });
+      this.setState({ html: this.state.html });
     } else {
       this.setState({ html: evt.target.value });
     }

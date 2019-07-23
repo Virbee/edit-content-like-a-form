@@ -13,7 +13,7 @@ class EditChapeau extends React.Component {
     const chapeauContainer = document.getElementById("chapeau-container");
     // si il y a overflow, ne pas mettre à jour l'état
     if (chapeauDiv.clientHeight > chapeauContainer.clientHeight) {
-      this.setState({ html: this.state.html.replace(/&nbsp;/g, "") });
+      this.setState({ html: this.state.html });
     } else {
       this.setState({ html: evt.target.value });
     }

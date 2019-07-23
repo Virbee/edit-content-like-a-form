@@ -72,8 +72,12 @@ h3#chapeau {
 .article-content {
   height: 7.4cm;
   text-align: justify;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 0.2cm;
   border: 1px solid lightgray;
+}
+
+#content {
+  -webkit-column-count: 4; /* Opera, Safari, Google Chrome */
+  -moz-column-count: 4; /* Firefox */
+  column-count: 4; /* Internet Explorer */
+  word-break: break-all;
 }

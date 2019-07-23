@@ -18,13 +18,8 @@ function App() {
           <div className="chapeau" id="chapeau-container">
             <EditChapeau />
           </div>
-          <div className="article-content">
-            <div className="column" id="first-column">
-              <EditText />
-            </div>
-            <div className="column" id="second-column">
-              <p />
-            </div>
+          <div className="article-content" id="content-container">
+            <EditText />
           </div>
         </div>
       </section>
