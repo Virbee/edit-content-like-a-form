@@ -9,28 +9,19 @@ class EditTitle extends React.Component {
   }
 
   handleChange = evt => {
-    if (this.state.html === "Entrez le titre ici") {
-      this.setState({ html: "" });
-    }
     const titleDiv = document.getElementById("title");
     const titleContainer = document.getElementById("title-container");
     // si il y a overflow, ne pas mettre à jour l'état
-    // et faire passer le cadre à rouge
     if (titleDiv.clientHeight > titleContainer.clientHeight) {
-      titleContainer.setAttribute("class", "title red-border");
       this.setState({ html: this.state.html.replace(/&nbsp;/g, "") });
-    }
-    //sinon retirer le cadre rouge et mettre à jour l'état
-    else {
-      titleContainer.setAttribute("class", "title");
+    } else {
       this.setState({ html: evt.target.value });
     }
   };
 
   pasteAsPlainText = event => {
     event.preventDefault();
-    const text = event.clipboardData.getData("text/plain");
-    console.log(text);
+    const text = event.clipboardData.getData("text/plain").slice(0, 23);
     document.execCommand("insertHTML", false, text); //(aCommandName, aShowDefaultUI, aValueArgument)
   };
 

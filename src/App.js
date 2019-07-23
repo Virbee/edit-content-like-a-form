@@ -15,7 +15,7 @@ function App() {
           <div className="title" id="title-container">
             <EditTitle />
           </div>
-          <div className="chapeau">
+          <div className="chapeau" id="chapeau-container">
             <EditChapeau />
           </div>
           <div className="article-content">
